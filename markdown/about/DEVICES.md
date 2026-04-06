@@ -19,15 +19,3 @@
 
 ### ChromeOS
 - Chromebooks have very similar system requirements, however Android version does not matter, as long as you can install Android apps.
-
-## iOS
-
-### Minimum requirements:
-- Apple A8 or A8X SoC
-- iOS or iPadOS 14
-- 2GB RAM
-
-### Recommended requirements
-- Apple A12X, A12Z, or A14 Bionic SoC or later
-- iOS or iPadOS 15 and higher
-- 6GB RAM or higher

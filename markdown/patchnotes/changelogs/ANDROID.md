@@ -1,9 +1,9 @@
-# Angel Aura Amethyst (Android)
+# Copper Copper Launcher (Android)
 
 ## 1.0 
 You're helping to shape our future while we work to build a release.
 
-# PojavLauncher Android
+# Copper Launcher Android
 
 ## "Gladiolus" release (latest)
 

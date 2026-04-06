@@ -4,22 +4,22 @@
 
 * You can try building on Android with [Termux](https://termux.dev), but no support will be included for it.
 
-* It is recommended to clone the PojavLauncher repository before starting [Setting Up JRE](BUILD_FROM_SOURCE.html#setting-up-jre)
+* It is recommended to clone the Copper Launcher repository before starting [Setting Up JRE](BUILD_FROM_SOURCE.html#setting-up-jre)
 
-* ```git clone https://github.com/AngelAuraMC/Amethyst-Android```
+* ```git clone https://github.com/CopperLauncher/Copper Launcher-Android```
 
 ## Setting up JRE
 
-* You can download it from [CI Auto Builds](https://github.com/PojavLauncherTeam/android-openjdk-build-multiarch/actions) if you don't want to/can't build.
+* You can download it from [CI Auto Builds](https://github.com/Copper LauncherTeam/android-openjdk-build-multiarch/actions) if you don't want to/can't build.
 
-* Source: [PojavLauncherTeam/android-openjdk-build-multiarch](https://github.com/PojavLauncherTeam/android-openjdk-build-multiarch)
+* Source: [Copper LauncherTeam/android-openjdk-build-multiarch](https://github.com/Copper LauncherTeam/android-openjdk-build-multiarch)
 
 ### Android
 
-* Clone the git repository of PojavLauncherTeam/android-openjdk-build-multiarch
+* Clone the git repository of Copper LauncherTeam/android-openjdk-build-multiarch
 
 ```
-git clone https://github.com/PojavLauncherTeam/android-openjdk-build-multiarch
+git clone https://github.com/Copper LauncherTeam/android-openjdk-build-multiarch
 ```
 
 * Change the directory to the cloned repository
@@ -34,10 +34,6 @@ cd android-openjdk-build-multiarch
 Do not attempt to build using a newer or older NDK, it will lead to compilation errors.
 :::
 
-### iOS
-
-* Get the latest [Xcode](https://developer.apple.com/xcode/) (tested with Xcode 12).
-
 #### Platform and architecture specific environment variables
 
 | Platform | Architecture | Target | Target_JDK |
@@ -46,26 +42,10 @@ Do not attempt to build using a newer or older NDK, it will lead to compilation 
 | Android | armv7/aarch32 | arm-linux-androideabi | arm |
 | Android | x86/i686 | i686-linux-android | x86 |
 | Android | x86_64/amd64 | x86_64-linux-android | x86_64 |
-| iOS/iPadOS | armv8/aarch64 | aarch64-macos-ios | aarch64 |
 
 #### Building JRE (Java Runtime Environment)
 
-<CodeSwitcher :languages="{android:'Android',ios:'iOS'}">
-<template v-slot:android>
 
-```android
-export BUILD_IOS=0
-```
-
-</template>
-<template v-slot:ios>
-
-```ios
-export BUILD_IOS=1
-```
-
-</template>
-</CodeSwitcher>
 
 ```export BUILD_FREETYPE_VERSION=[2.10.4]```
 

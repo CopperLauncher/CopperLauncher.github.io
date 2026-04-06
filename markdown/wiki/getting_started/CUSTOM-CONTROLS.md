@@ -27,35 +27,3 @@
  6- Option to select default custom controls.
  
  7- Exports current controls.
-
-## iOS
-
-To start editing your controlmap in iOS, head to top-left and press the sidebar. (shown in image)
-
-<img src="./images/CUSTOM-CONTROLS/ios/CUSTOM-CONTROLS1.png" width=45% height=45%>
-
-Press the custom controls button.
-
-<img src="./images/CUSTOM-CONTROLS/ios/CUSTOM-CONTROLS2.png" width=45% height=45%>
-
-After that, long press anywhere for more options.
-
-<img src="./images/CUSTOM-CONTROLS/ios/CUSTOM-CONTROLS3.png" width=75% height=75%>
-
-Now you will get a pop-up with the following options:
-
-<img src="./images/CUSTOM-CONTROLS/ios/CUSTOM-CONTROLS4.png" width=75% height=75%>
-
-1- Exits the controlmap editor.
-
-2- Saves the current layout/edited controlmap.
-
-3- Loads an existing .json (controlmap) from the controlmap folder.
-
-4- Adds a safe area where buttons are restricted from getting outside of the safe area, whilst not registering touches nor gestures outside the safe area.
-
-5- Adds a button to your liking.
-
-6- Adds a button drawer, has a function of adding a sub-button binded to its drawer. When pressed, buttons binded to it will show up, configurable to make it hold button instead of toggling.
-
-7- Adds a joystick.

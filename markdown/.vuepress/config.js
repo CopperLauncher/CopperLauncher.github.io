@@ -5,7 +5,7 @@ const { sidebar } = vuepressBar({
 });
 
 module.exports = {
-  title: "AngelAuraMC",
+  title: "Copper Launcher",
   description:
     "A team of people working to bring Minecraft: Java Edition to new heights.",
   head: [
@@ -13,7 +13,7 @@ module.exports = {
       "meta",
       {
         name: "theme-color",
-        content: "#ffffff",
+        content: "#E8640A",
         media: "(prefers-color-scheme: light)",
       },
     ],
@@ -80,12 +80,12 @@ module.exports = {
   themeConfig: {
     displayAllHeaders: false,
     lastUpdated: true,
-    repo: "https://github.com/AngelAuraMC/angelauramc.github.io/",
+    repo: "https://github.com/CopperLauncher/CopperLauncher",
     docsDir: "markdown",
     docsBranch: "main",
     editLinks: true,
     editLinkText: "Help us improve this page!",
-    logo: "https://assets.angelauramc.dev/angelauramc/logo_512x512.png",
+    logo: "https://assets.copperlauncher.dev/copperlauncher/logo_512x512.png",
     sidebar: SideBar,
     nav: NavBar,
   },

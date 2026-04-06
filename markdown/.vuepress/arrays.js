@@ -17,19 +17,7 @@ const android_FAQ = {
     "32BIT", // Platform and performance limitations (32bit).
     "FFMPEG", // Setting up FFMPEG, for Replay Mod.
     "SHADERS", // Look what we got here.
-    "RENDERERS", // I have no idea what they do and why PojavLauncher needs it.
-  ],
-};
-
-const ios_FAQ = {
-  title: "iOS-specific", // Subgroup for iOS FAQ
-  collapsable: true,
-  sidebarDepth: 1,
-  path: "ios", // Do not add a trailing slash here unless this also has a child nested in it with its own path
-  children: [
-    "JIT", // iOS and "JIT".
-    "APPSTORE", // Will PojavLauncher ever come to App Store for iOS?
-    "KEYCHAIN-ERR", // "Failed to save account tokens to keychains"
+    "RENDERERS", // I have no idea what they do and why Copper Launcher needs it.
   ],
 };
 
@@ -45,7 +33,6 @@ export const FAQ = {
     "CANTLOGIN", // Can't log in.
     // FAQ that applies to both platforms ends here
     android_FAQ, // Subgroup for Android-specific FAQ. See Above to configure.
-    ios_FAQ, // Subgroup for iOS-specific FAQ. See Above to configure.
   ],
 };
 
@@ -54,11 +41,11 @@ export const Getting_Started = {
   path: "/wiki/getting_started/",
   collapsable: true,
   children: [
-    "INSTALL", // Installing PojavLauncher.
-    "BUILD-FROM-SOURCE", // Building PojavLauncher from source.
+    "INSTALL", // Installing Copper Launcher.
+    "BUILD-FROM-SOURCE", // Building Copper Launcher from source.
     "SIGN-IN", // Signing in.
     "CUSTOM-CONTROLS", // Customizing the on-screen controls.
-    "SOCIALMEDIA", // Official PojavLauncher social medias.
+    "SOCIALMEDIA", // Official Copper Launcher social medias.
   ],
 };
 
@@ -79,7 +66,7 @@ export const Going_Further = {
 //// These are used to change the sidebar of their corresponding navbar counterpart. These don't use sidebar groups, instead they use the header as the title of the sidebar group (see Vuepress Documentation for more information on this behaviour). These sections are simple enough to not need custom shenanigans.
 
 export const about = [
-  "NOTE-FROM-EVA", // Note from Eva on legality of Amethyst, don't modify it pls
+  "NOTE-FROM-EVA", // Note from Eva on legality of Copper Launcher, don't modify it pls
   "LEGAL", // Legal + Security.
   "DEVICES", // Supported Devices.
   "MCVERS", // Supported Minecraft Versions.
@@ -88,12 +75,11 @@ export const about = [
 
 export const contribute = [
   "CONT-WEBSITE", // Contributing to this website.
-  "CONT-TRANSLATIONS", // Contributing to PojavLauncher translations, hopefully website translations later on.
+  "CONT-TRANSLATIONS", // Contributing to Copper Launcher translations, hopefully website translations later on.
 ];
 
 export const patchnotes = [
   "changelogs/ANDROID",
-  "changelogs/IOS",
 ];
 
 // Configuration Arrays
@@ -124,9 +110,10 @@ export const GroupOrder = [
 /** This is just the regular vuepress nav configuration but it's in here instead of config.js because it looks nicer that way */
 export const NavBar = [
   { text: "Wiki", link: "/wiki/" },
-  { text: "About Amethyst", link: "/about/NOTE-FROM-EVA" },
+  { text: "About Copper Launcher", link: "/about/NOTE-FROM-EVA" },
   { text: "Contributing", link: "/contribute/CONT-WEBSITE" },
   { text: "Recent Updates", link: "/patchnotes/changelogs/ANDROID" },
+  { text: "GitHub", link: "https://github.com/CopperLauncher/CopperLauncher" },
 ];
 
 /** The logic needed to parse all of this for dynamic sidebar generation looks awful if it was defined here so it isn't. See ./bars.js */

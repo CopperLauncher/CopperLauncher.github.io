@@ -1,5 +1,5 @@
 # Unsupported Mods and Clients (+ Workarounds/Fixes)
-Not everything that works on PC works on PojavLauncher. Below is a non-exhaustive list of mods that **may** not work, along with fixes or workarounds.
+Not everything that works on PC works on Copper Launcher. Below is a non-exhaustive list of mods that **may** not work, along with fixes or workarounds.
 
 ## Performance Mods + Shaders
 - [Sodium](https://modrinth.com/mod/sodium)
@@ -94,7 +94,7 @@ Not everything that works on PC works on PojavLauncher. Below is a non-exhaustiv
 - [Ares Client](https://www.aresclient.com/)
 # Credits
 
-- https://github.com/Mathias-Boulay/ and all the people in issue [#1948](https://github.com/PojavLauncherTeam/PojavLauncher/issues/1948)
+- https://github.com/Mathias-Boulay/ and all the people in issue [#1948](https://github.com/Copper LauncherTeam/Copper Launcher/issues/1948)
 - https://github.com/ZenZenXDz
 - https://github.com/revoscode
 - https://github.com/GaucovyAero

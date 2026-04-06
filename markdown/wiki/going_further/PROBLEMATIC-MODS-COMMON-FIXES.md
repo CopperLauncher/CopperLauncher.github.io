@@ -23,7 +23,7 @@
 
 2. Download the [BTW Installer](https://github.com/BTW-Community/legacy-fabric-installer/releases/tag/1.1.1-btw).
 
-3. Go into Amethyst, execute the .jar and install it.
+3. Go into Copper Launcher, execute the .jar and install it.
 
 4. Launch the game (should crash that’s normal).
 
@@ -61,9 +61,3 @@ There's a script created by [sa1672ndo](https://github.com/sa1672ndo) that autom
 The script can be found [here](https://github.com/sa1672ndo/vs2termux).
 
 **credits to [sa1672ndo](https://github.com/sa1672ndo)**
-
-## iOS
-
-As of 2025/04/19, Valkyrien Skies 2 can run natively on iOS, due to the implementation of [dylib patching for game dlopen calls](https://github.com/AngelAuraMC/Amethyst-iOS/commit/ec04885ce5a6d5921db4b162e5e514bc4b035db5). A developer build installation is required from the [actions tab](https://github.com/AngelAuraMC/Amethyst-iOS/actions) for now, though.
-
-**credits to [kiokori-git](https://github.com/kiokori-git)**

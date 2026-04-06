@@ -7,12 +7,12 @@ Here's how to get it to work. You need to have a **GitHub account** in order to 
 ## Known issues
 - [Android only] Crosshair icon and Block outline don't render.
 - You can tell us in [our Discord server](https://discord.gg/6RpEJda) or open an issue if you found one.
-- UPDATE: ~~32-bit platforms (ARMv7 and i386) are currently broken for various reasons. We are looking for a solution.~~ We finally found a gold bar under the sea! Although this [JRE17](https://www.mediafire.com/file/v0xcufgzwgga0jy/jre17-arm-20210914-termux.tar.xz/file) is not initially made for PojavLauncher, it works magically. Now you can use this JRE17 build to play 1.17.1 until we stabilize it and bring it to PojavLauncher. (Very soon.)
+- UPDATE: ~~32-bit platforms (ARMv7 and i386) are currently broken for various reasons. We are looking for a solution.~~ We finally found a gold bar under the sea! Although this [JRE17](https://www.mediafire.com/file/v0xcufgzwgga0jy/jre17-arm-20210914-termux.tar.xz/file) is not initially made for Copper Launcher, it works magically. Now you can use this JRE17 build to play 1.17.1 until we stabilize it and bring it to Copper Launcher. (Very soon.)
 
 ## Platform-specific instruction
 ### Android:
-- Download latest build: [here](https://github.com/PojavLauncherTeam/PojavLauncher/actions?query=branch%3Av3_openjdk).
-- Download JRE17: [here](https://github.com/PojavLauncherTeam/android-openjdk-build-multiarch/releases/tag/jre17-ec28559). You need to download the artifact that matches your device architecture: `jre17-<architecture>`, don’t pick jdk17 or debuginfo.
+- Download latest build: [here](https://github.com/Copper LauncherTeam/Copper Launcher/actions?query=branch%3Av3_openjdk).
+- Download JRE17: [here](https://github.com/Copper LauncherTeam/android-openjdk-build-multiarch/releases/tag/jre17-ec28559). You need to download the artifact that matches your device architecture: `jre17-<architecture>`, don’t pick jdk17 or debuginfo.
 - When you install the APK, it will be displayed as second app if you have one installed before.
 - Go to launcher settings.
 - Choose Manage runtime -> Add new. Pick the downloaded JRE17 runtime there.
@@ -22,8 +22,8 @@ Here's how to get it to work. You need to have a **GitHub account** in order to 
 
 ### iOS:
 - Install package `openjdk-16-jre` or `openjdk-17-jre` (if you have Procursus bootstrap)
-- Get latest build from the [GitHub](https://github.com/PojavLauncherTeam/PojavLauncher_iOS/actions?query=branch%3Amain) or [Doregon's Repo](https://repo.doregon.gq).
-- After install, go into PojavLauncher, sign in and choose the more icon to enter Preferences.
+- Get latest build from the [GitHub](https://github.com/Copper LauncherTeam/Copper Launcher_iOS/actions?query=branch%3Amain) or [Doregon's Repo](https://repo.doregon.gq).
+- After install, go into Copper Launcher, sign in and choose the more icon to enter Preferences.
 - Change Java version to 16 or 17, then restart the launcher in order to take effect. For 1.18 snapshots, Java 17 is recommended as Java 16 seems to cause a weird problem.
 - Change Renderer to `tinygl4angle`.
 - Now launch Minecraft 1.17 and enjoy!
@@ -34,9 +34,9 @@ Here's how to get it to work. You need to have a **GitHub account** in order to 
 - A small note: When the popup about 1.17 appears, tap **Play Anyway**. Tapping OK **will overwrite the patch**.
 - Another small note: 1.17.1 or below will simply not work with this patch. ~~I recommend using per-version config feature with it.~~ If you still want to play 1.17.1 or below, keep the original assets-v0 and follow this instruction:
 
-1. Download the new assets-v0 on the PojavLauncher Discord server, or [here.](https://cdn.discordapp.com/attachments/724163890803638277/923349783589056522/assets-v0.zip)
+1. Download the new assets-v0 on the Copper Launcher Discord server, or [here.](https://cdn.discordapp.com/attachments/724163890803638277/923349783589056522/assets-v0.zip)
 
-2. Give it another name then move it to /sdcard/Android/data/net.kdt.pojavlaunch[.debug]/files/.minecraft/resourcepacks (on Android 10 or later) or /sdcard/games/PojavLauncher/.minecraft/resourcepacks (on Android 9 or below).
+2. Give it another name then move it to /sdcard/Android/data/net.kdt.pojavlaunch[.debug]/files/.minecraft/resourcepacks (on Android 10 or later) or /sdcard/games/Copper Launcher/.minecraft/resourcepacks (on Android 9 or below).
 
 3. Modify the options.txt file.
 With the file names above, change the resourcePacks key to:

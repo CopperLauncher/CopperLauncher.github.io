@@ -1,10 +1,10 @@
-# The AngelAuraMC Wiki Repository
+# The CopperLauncher Wiki Repository
 
-### Notice regarding the transition from PojavLauncherTeam to AngelAuraMC
+### Notice regarding the transition from Copper LauncherTeam to CopperLauncher
 The transition is still underway, and this wiki is a great example of the work to be done. Some links and information may errenously point to outdated or inaccurate results. 
 
-### Notice for Amethyst users
-Issues pertaining to Amethyst on [Android](https://github.com/AngelAuraMC/Amethyst-Android) or [iOS](https://github.com/AngelAuraMC/Amethyst-iOS) should be made in their respective repositories. They will be closed here, and repeat offenders will be blocked from this GitHub repository.
+### Notice for Copper Launcher users
+Issues pertaining to Copper Launcher on [Android](https://github.com/CopperLauncher/Copper Launcher-Android) or [iOS](https://github.com/CopperLauncher/Copper Launcher-iOS) should be made in their respective repositories. They will be closed here, and repeat offenders will be blocked from this GitHub repository.
 
 #### If you are/wish to be a Wiki Contributor, continue reading
 

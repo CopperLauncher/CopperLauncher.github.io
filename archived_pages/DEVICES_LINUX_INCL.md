@@ -19,7 +19,7 @@ Chromebooks have very similar system requirements, however Android version does 
 
 ### Linux
 
-It is not recommended to run PojavLauncher on Linux. Though, you can try sideloading the app on your distribution by using Anbox or Waydroid. We won't provide support for it though.
+It is not recommended to run Copper Launcher on Linux. Though, you can try sideloading the app on your distribution by using Anbox or Waydroid. We won't provide support for it though.
 - Installing Anbox
   - on Ubuntu (`snap` is required);
   ```
@@ -34,7 +34,7 @@ It is not recommended to run PojavLauncher on Linux. Though, you can try sideloa
 
 Minimum requirements:
 - Apple A8 SoC
-   - The Apple A7 SoC is losing support in PojavLauncher 2.2.
+   - The Apple A7 SoC is losing support in Copper Launcher 2.2.
 - iOS 12
 - 1 gigabyte of RAM
 

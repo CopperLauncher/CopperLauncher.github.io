@@ -1,5 +1,5 @@
 # Signing in
-Amethyst supports multiple types of accounts to sign in:  
+Copper Launcher supports multiple types of accounts to sign in:  
 
 - Microsoft Accounts(*)
 - Local Accounts(^)
