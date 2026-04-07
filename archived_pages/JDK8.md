@@ -1,1 +1,0 @@
-# OpenJDK 8, coming to iOS
