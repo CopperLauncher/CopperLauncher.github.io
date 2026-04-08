@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Launcher Preferences — Copper Launcher</title>
+  <title>Launcher Preferences — CopperLauncher</title>
   <link rel="icon" href="https://raw.githubusercontent.com/CopperLauncher/CopperLauncher/refs/heads/v3_openjdk/app_pojavlauncher/src/main/assets/amethyst.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -114,26 +114,15 @@
       overflow-x: auto;
       margin-bottom: 14px;
     }
-    pre code {
-      background: none;
-      border: none;
-      padding: 0;
-      font-size: 12.5px;
-      color: #c9c9c9;
-    }
+    pre code { background: none; border: none; padding: 0; font-size: 12.5px; color: #c9c9c9; }
 
-    /* TABLE */
     table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 13px; }
     th { background: #252525; color: #e8e8e8; font-weight: 600; padding: 7px 12px; text-align: left; border: 1px solid var(--border); }
     td { padding: 7px 12px; border: 1px solid var(--border); color: var(--text-muted); }
     tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
 
-    /* CALLOUTS */
     .tip, .warning, .danger {
-      border-radius: 6px;
-      padding: 10px 14px;
-      margin-bottom: 14px;
-      border-left: 3px solid;
+      border-radius: 6px; padding: 10px 14px; margin-bottom: 14px; border-left: 3px solid;
     }
     .tip { background: rgba(74,222,128,0.06); border-color: #4ade80; }
     .tip::before { content: "💡 Tip"; display: block; font-weight: 600; color: #4ade80; margin-bottom: 4px; font-size: 12px; }
@@ -142,6 +131,10 @@
     .danger { background: rgba(248,113,113,0.06); border-color: #f87171; }
     .danger::before { content: "🚨 Danger"; display: block; font-weight: 600; color: #f87171; margin-bottom: 4px; font-size: 12px; }
     .tip p, .warning p, .danger p { margin-bottom: 0; }
+
+    .play-badge { display: inline-block; margin: 14px 0 4px; }
+    .play-badge img { height: 68px; border-radius: 8px; border: 1px solid #333; display: block; }
+    .play-badge:hover img { opacity: 0.85; }
 
     .footer-meta {
       margin-top: 56px; padding-top: 18px;
@@ -155,16 +148,16 @@
     /* ── MOBILE MENU ── */
     .menu-btn {
       display: none;
-      margin-left: auto;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 4px 6px;
+      padding: 4px 8px;
       color: var(--text);
       flex-direction: column;
       gap: 5px;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
     .menu-btn span {
       display: block;
@@ -178,23 +171,23 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.55);
-      z-index: 40;
+      background: rgba(0,0,0,.6);
+      z-index: 48;
     }
     .overlay.open { display: block; }
     @media (max-width: 700px) {
       .menu-btn { display: flex; }
-      .topbar-right { display: none; }
+      .topbar-right { display: none !important; }
       .sidebar {
         position: fixed;
         left: -220px;
         top: 0;
         bottom: 0;
-        z-index: 45;
+        z-index: 55;
         height: 100vh;
         width: 210px;
         transition: left .25s ease;
-        padding-top: 12px;
+        padding-top: 50px;
       }
       .sidebar.open { left: 0; }
       .main { padding: 28px 18px; }
@@ -209,12 +202,12 @@
     <img src="https://raw.githubusercontent.com/CopperLauncher/CopperLauncher/refs/heads/v3_openjdk/app_pojavlauncher/src/main/assets/amethyst.png" alt="CopperLauncher"/>
   </div>
   <span class="topbar-name">CopperLauncher</span>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   <div class="topbar-right">
     <a href="https://github.com/CopperLauncher/CopperLauncher" target="_blank" rel="noopener">GitHub</a>
     <a href="/docs/wiki/">Wiki</a>
     <a href="/docs/about/NOTE-FROM-EVA.html">About</a>
   </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
 </div>
 
 <div class="layout">
@@ -222,74 +215,94 @@
   <!-- SIDEBAR -->
   <nav class="sidebar">
     <div class="sidebar-section">
-      <a class="sidebar-link" href="/">CopperLauncher</a>
+      <a class="sidebar-link " href="/">CopperLauncher</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Wiki</div>
-      <a class="sidebar-link" href="/docs/wiki/">Overview</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/INSTALL-android.html">Install (Android)</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/INSTALL-ios.html">Install (iOS)</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/FIRST-LAUNCH.html">First Launch</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/CUSTOM-CONTROLS.html">Custom Controls</a>
+      <a class="sidebar-link " href="/docs/wiki/">Overview</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/INSTALL-android.html">Install (Android)</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/INSTALL-ios.html">Install (iOS)</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/FIRST-LAUNCH.html">First Launch</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/CUSTOM-CONTROLS.html">Custom Controls</a>
       <a class="sidebar-link active" href="/docs/wiki/getting_started/LAUNCHER-PREFERENCES.html">Preferences</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Going Further</div>
-      <a class="sidebar-link" href="/docs/wiki/going_further/MODS.html">Mods</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/MODPACKS.html">Modpacks</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/SHADERS.html">Shaders</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/OPTIMIZATION.html">Optimization</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/ACCOUNTS.html">Accounts</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/MODS.html">Mods</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/MODPACKS.html">Modpacks</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/SHADERS.html">Shaders</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/OPTIMIZATION.html">Optimization</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/ACCOUNTS.html">Accounts</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">FAQ</div>
-      <a class="sidebar-link" href="/docs/wiki/faq/android/FAQ-android.html">Android FAQ</a>
-      <a class="sidebar-link" href="/docs/wiki/faq/ios/FAQ-ios.html">iOS FAQ</a>
+      <a class="sidebar-link " href="/docs/wiki/faq/android/FAQ-android.html">Android FAQ</a>
+      <a class="sidebar-link " href="/docs/wiki/faq/ios/FAQ-ios.html">iOS FAQ</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Project</div>
-      <a class="sidebar-link" href="/docs/about/NOTE-FROM-EVA.html">About</a>
-      <a class="sidebar-link" href="/docs/contribute/CONT-WEBSITE.html">Contribute</a>
-      <a class="sidebar-link" href="/docs/contribute/CONT-WIKI.html">Wiki Contributing</a>
-      <a class="sidebar-link" href="/docs/patchnotes/changelogs/ANDROID.html">Changelog (Android)</a>
-      <a class="sidebar-link" href="/docs/patchnotes/changelogs/IOS.html">Changelog (iOS)</a>
+      <a class="sidebar-link " href="/docs/about/NOTE-FROM-EVA.html">About</a>
+      <a class="sidebar-link " href="/docs/contribute/CONT-WEBSITE.html">Contribute</a>
+      <a class="sidebar-link " href="/docs/contribute/CONT-WIKI.html">Wiki Contributing</a>
+      <a class="sidebar-link " href="/docs/patchnotes/changelogs/ANDROID.html">Changelog (Android)</a>
+      <a class="sidebar-link " href="/docs/patchnotes/changelogs/IOS.html">Changelog (iOS)</a>
     </div>
   </nav>
 
   <!-- MAIN CONTENT -->
   <main class="main">
-<h1>Launcher Preferences</h1>
-<p>Tap the <strong>gear icon</strong> on the launcher home screen to open Settings.</p>
-<h2>Java Settings</h2>
-<table>
-  <tr><th>Setting</th><th>Description</th></tr>
-  <tr><td><strong>Java Runtime</strong></td><td>Choose between OpenJDK 8, 17, or 21</td></tr>
-  <tr><td><strong>Java Arguments</strong></td><td>Custom JVM arguments — see <a href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments guide</a></td></tr>
-  <tr><td><strong>RAM Allocation</strong></td><td>How much RAM to give Minecraft (default: auto)</td></tr>
-</table>
-<div class="tip"><p>For Minecraft 1.17+, you must use Java 17 or higher. Copper Launcher selects this automatically.</p></div>
-<h2>Renderer Settings</h2>
-<table>
-  <tr><th>Setting</th><th>Description</th></tr>
-  <tr><td><strong>Renderer</strong></td><td>GL4ES (default), VirGL, MobileGlues</td></tr>
-  <tr><td><strong>Renderer String Override</strong></td><td>Spoofs a different GPU string</td></tr>
-</table>
-<h2>Launcher Settings</h2>
-<table>
-  <tr><th>Setting</th><th>Description</th></tr>
-  <tr><td><strong>Theme</strong></td><td>Switch between Copper (default) and other themes</td></tr>
-  <tr><td><strong>Language</strong></td><td>Interface language (Crowdin community translations)</td></tr>
-  <tr><td><strong>Show Log</strong></td><td>Show the game log window during launch</td></tr>
-</table>
-<h2>Experimental Settings</h2>
-<div class="warning"><p>Experimental settings may cause instability. Use with caution.</p></div>
-<table>
-  <tr><th>Setting</th><th>Description</th></tr>
-  <tr><td><strong>Turbo Mode</strong></td><td>Disables frame limiting for maximum performance</td></tr>
-  <tr><td><strong>Force Vsync</strong></td><td>Forces vertical sync</td></tr>
-  <tr><td><strong>Use alternate surface</strong></td><td>Alternative rendering surface (helps on some devices)</td></tr>
-</table>
+    <h1>Launcher Preferences</h1>
+    <p>Tap the <strong>gear icon</strong> on the launcher home screen to open Settings.</p>
+
+    <h2>Java / JRE Settings</h2>
+    <p>CopperLauncher includes a built-in Java runtime downloader under <strong>Settings → Java Tweaks → Java Runtimes</strong>.</p>
+    <table>
+      <tr><th>Runtime</th><th>Status</th><th>Notes</th></tr>
+      <tr><td><strong>Internal (Java 8)</strong></td><td>Bundled — always available</td><td>Default for older Minecraft versions. Shown as <code>1.8.0_xxx</code></td></tr>
+      <tr><td><strong>External 17</strong></td><td>Download in-app</td><td>Required for Minecraft 1.17–1.20</td></tr>
+      <tr><td><strong>External 21</strong></td><td>Download in-app</td><td>Required for Minecraft 1.21+</td></tr>
+      <tr><td><strong>External 25</strong></td><td>Download in-app</td><td>Latest — for future Minecraft versions</td></tr>
+    </table>
+    <p>To download a runtime, go to <strong>Settings → Java Tweaks → Java Runtimes</strong>, find the version you need, and tap <strong>DOWNLOAD</strong>. You can also tap <strong>ADD NEW</strong> to add a custom JRE, or <strong>DELETE RUNTIME</strong> to remove one.</p>
+    <div class="tip"><p>CopperLauncher selects the correct Java version automatically based on the Minecraft version you launch. You only need to download an external runtime if your Minecraft version requires it.</p></div>
+
+    <table>
+      <tr><th>Setting</th><th>Description</th></tr>
+      <tr><td><strong>Java Arguments</strong></td><td>Custom JVM arguments — see <a href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments guide</a></td></tr>
+      <tr><td><strong>RAM Allocation</strong></td><td>How much RAM to give Minecraft (default: auto)</td></tr>
+      <tr><td><strong>Sandbox .jar execution</strong></td><td>Controls the availability of the sandbox security manager when executing a <code>.jar</code> file</td></tr>
+    </table>
+
+    <h2>Renderer Settings</h2>
+    <p>The renderer is selected per-instance when creating a new instance. You can change it later in instance settings under <strong>Default controlmap</strong>.</p>
+    <table>
+      <tr><th>Renderer</th><th>Versions</th><th>Speed</th><th>Notes</th></tr>
+      <tr><td><strong>Holy GL4ES</strong></td><td>Up to 1.21.4</td><td>Fast</td><td>Best compatibility for older versions</td></tr>
+      <tr><td><strong>Zink (Vulkan)</strong></td><td>All versions</td><td>Mid</td><td>Uses Vulkan via Zink translation layer</td></tr>
+      <tr><td><strong>MobileGlues (OpenGL ES)</strong></td><td>1.17+</td><td>Fast</td><td>Native OpenGL ES; great performance on modern devices</td></tr>
+      <tr><td><strong>LTW (OpenGL ES 3)</strong></td><td>1.17+</td><td>Fast</td><td>Lightweight OpenGL ES 3 renderer; good balance of compatibility and speed</td></tr>
+      <tr><td><strong>Krypton Wrapper</strong></td><td>Up to 1.21.8</td><td>Fast</td><td>Wraps OpenGL calls for improved performance</td></tr>
+      <tr><td><strong>Default</strong></td><td>All versions</td><td>—</td><td>Uses the system default renderer</td></tr>
+    </table>
+    <div class="tip"><p>If you are unsure which renderer to pick, try <strong>MobileGlues</strong> for Minecraft 1.17+ or <strong>Holy GL4ES</strong> for older versions.</p></div>
+
+    <h2>Launcher Settings</h2>
+    <table>
+      <tr><th>Setting</th><th>Description</th></tr>
+      <tr><td><strong>Theme</strong></td><td>Switch between Copper (default) and other themes</td></tr>
+      <tr><td><strong>Language</strong></td><td>Interface language (Crowdin community translations)</td></tr>
+      <tr><td><strong>Show Log</strong></td><td>Show the game log window during launch</td></tr>
+    </table>
+
+    <h2>Experimental Settings</h2>
+    <div class="warning"><p>Experimental settings may cause instability. Use with caution.</p></div>
+    <table>
+      <tr><th>Setting</th><th>Description</th></tr>
+      <tr><td><strong>Turbo Mode</strong></td><td>Disables frame limiting for maximum performance</td></tr>
+      <tr><td><strong>Force Vsync</strong></td><td>Forces vertical sync</td></tr>
+      <tr><td><strong>Use alternate surface</strong></td><td>Alternative rendering surface (helps on some devices)</td></tr>
+    </table>
 
   </main>
 
@@ -297,14 +310,17 @@
 
 <div class="overlay" id="overlay"></div>
 <script>
-  const btn = document.getElementById('menuBtn');
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.getElementById('overlay');
-  function openMenu() { sidebar.classList.add('open'); overlay.classList.add('open'); }
-  function closeMenu() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
-  btn.addEventListener('click', openMenu);
-  overlay.addEventListener('click', closeMenu);
-  sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  (function() {
+    var btn = document.getElementById('menuBtn');
+    var sidebar = document.querySelector('.sidebar');
+    var overlay = document.getElementById('overlay');
+    if (!btn || !sidebar || !overlay) return;
+    function openMenu() { sidebar.classList.add('open'); overlay.classList.add('open'); }
+    function closeMenu() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+    btn.addEventListener('click', openMenu);
+    overlay.addEventListener('click', closeMenu);
+    sidebar.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+  })();
 </script>
 </body>
 </html>

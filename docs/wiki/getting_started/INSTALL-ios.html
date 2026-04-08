@@ -114,26 +114,15 @@
       overflow-x: auto;
       margin-bottom: 14px;
     }
-    pre code {
-      background: none;
-      border: none;
-      padding: 0;
-      font-size: 12.5px;
-      color: #c9c9c9;
-    }
+    pre code { background: none; border: none; padding: 0; font-size: 12.5px; color: #c9c9c9; }
 
-    /* TABLE */
     table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 13px; }
     th { background: #252525; color: #e8e8e8; font-weight: 600; padding: 7px 12px; text-align: left; border: 1px solid var(--border); }
     td { padding: 7px 12px; border: 1px solid var(--border); color: var(--text-muted); }
     tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
 
-    /* CALLOUTS */
     .tip, .warning, .danger {
-      border-radius: 6px;
-      padding: 10px 14px;
-      margin-bottom: 14px;
-      border-left: 3px solid;
+      border-radius: 6px; padding: 10px 14px; margin-bottom: 14px; border-left: 3px solid;
     }
     .tip { background: rgba(74,222,128,0.06); border-color: #4ade80; }
     .tip::before { content: "💡 Tip"; display: block; font-weight: 600; color: #4ade80; margin-bottom: 4px; font-size: 12px; }
@@ -142,6 +131,10 @@
     .danger { background: rgba(248,113,113,0.06); border-color: #f87171; }
     .danger::before { content: "🚨 Danger"; display: block; font-weight: 600; color: #f87171; margin-bottom: 4px; font-size: 12px; }
     .tip p, .warning p, .danger p { margin-bottom: 0; }
+
+    .play-badge { display: inline-block; margin: 14px 0 4px; }
+    .play-badge img { height: 68px; border-radius: 8px; border: 1px solid #333; display: block; }
+    .play-badge:hover img { opacity: 0.85; }
 
     .footer-meta {
       margin-top: 56px; padding-top: 18px;
@@ -155,16 +148,16 @@
     /* ── MOBILE MENU ── */
     .menu-btn {
       display: none;
-      margin-left: auto;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 4px 6px;
+      padding: 4px 8px;
       color: var(--text);
       flex-direction: column;
       gap: 5px;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
     .menu-btn span {
       display: block;
@@ -178,23 +171,23 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.55);
-      z-index: 40;
+      background: rgba(0,0,0,.6);
+      z-index: 48;
     }
     .overlay.open { display: block; }
     @media (max-width: 700px) {
       .menu-btn { display: flex; }
-      .topbar-right { display: none; }
+      .topbar-right { display: none !important; }
       .sidebar {
         position: fixed;
         left: -220px;
         top: 0;
         bottom: 0;
-        z-index: 45;
+        z-index: 55;
         height: 100vh;
         width: 210px;
         transition: left .25s ease;
-        padding-top: 12px;
+        padding-top: 50px;
       }
       .sidebar.open { left: 0; }
       .main { padding: 28px 18px; }
@@ -209,12 +202,12 @@
     <img src="https://raw.githubusercontent.com/CopperLauncher/CopperLauncher/refs/heads/v3_openjdk/app_pojavlauncher/src/main/assets/amethyst.png" alt="CopperLauncher"/>
   </div>
   <span class="topbar-name">CopperLauncher</span>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   <div class="topbar-right">
     <a href="https://github.com/CopperLauncher/CopperLauncher" target="_blank" rel="noopener">GitHub</a>
     <a href="/docs/wiki/">Wiki</a>
     <a href="/docs/about/NOTE-FROM-EVA.html">About</a>
   </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
 </div>
 
 <div class="layout">
@@ -222,38 +215,38 @@
   <!-- SIDEBAR -->
   <nav class="sidebar">
     <div class="sidebar-section">
-      <a class="sidebar-link" href="/">CopperLauncher</a>
+      <a class="sidebar-link " href="/">CopperLauncher</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Wiki</div>
-      <a class="sidebar-link" href="/docs/wiki/">Overview</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/INSTALL-android.html">Install (Android)</a>
+      <a class="sidebar-link " href="/docs/wiki/">Overview</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/INSTALL-android.html">Install (Android)</a>
       <a class="sidebar-link active" href="/docs/wiki/getting_started/INSTALL-ios.html">Install (iOS)</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/FIRST-LAUNCH.html">First Launch</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/CUSTOM-CONTROLS.html">Custom Controls</a>
-      <a class="sidebar-link" href="/docs/wiki/getting_started/LAUNCHER-PREFERENCES.html">Preferences</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/FIRST-LAUNCH.html">First Launch</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/CUSTOM-CONTROLS.html">Custom Controls</a>
+      <a class="sidebar-link " href="/docs/wiki/getting_started/LAUNCHER-PREFERENCES.html">Preferences</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Going Further</div>
-      <a class="sidebar-link" href="/docs/wiki/going_further/MODS.html">Mods</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/MODPACKS.html">Modpacks</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/SHADERS.html">Shaders</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/OPTIMIZATION.html">Optimization</a>
-      <a class="sidebar-link" href="/docs/wiki/going_further/ACCOUNTS.html">Accounts</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/MODS.html">Mods</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/MODPACKS.html">Modpacks</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/SHADERS.html">Shaders</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/JAVA-ARGS.html">Java Arguments</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/OPTIMIZATION.html">Optimization</a>
+      <a class="sidebar-link " href="/docs/wiki/going_further/ACCOUNTS.html">Accounts</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">FAQ</div>
-      <a class="sidebar-link" href="/docs/wiki/faq/android/FAQ-android.html">Android FAQ</a>
-      <a class="sidebar-link" href="/docs/wiki/faq/ios/FAQ-ios.html">iOS FAQ</a>
+      <a class="sidebar-link " href="/docs/wiki/faq/android/FAQ-android.html">Android FAQ</a>
+      <a class="sidebar-link " href="/docs/wiki/faq/ios/FAQ-ios.html">iOS FAQ</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Project</div>
-      <a class="sidebar-link" href="/docs/about/NOTE-FROM-EVA.html">About</a>
-      <a class="sidebar-link" href="/docs/contribute/CONT-WEBSITE.html">Contribute</a>
-      <a class="sidebar-link" href="/docs/contribute/CONT-WIKI.html">Wiki Contributing</a>
-      <a class="sidebar-link" href="/docs/patchnotes/changelogs/ANDROID.html">Changelog (Android)</a>
-      <a class="sidebar-link" href="/docs/patchnotes/changelogs/IOS.html">Changelog (iOS)</a>
+      <a class="sidebar-link " href="/docs/about/NOTE-FROM-EVA.html">About</a>
+      <a class="sidebar-link " href="/docs/contribute/CONT-WEBSITE.html">Contribute</a>
+      <a class="sidebar-link " href="/docs/contribute/CONT-WIKI.html">Wiki Contributing</a>
+      <a class="sidebar-link " href="/docs/patchnotes/changelogs/ANDROID.html">Changelog (Android)</a>
+      <a class="sidebar-link " href="/docs/patchnotes/changelogs/IOS.html">Changelog (iOS)</a>
     </div>
   </nav>
 
@@ -276,14 +269,17 @@
 
 <div class="overlay" id="overlay"></div>
 <script>
-  const btn = document.getElementById('menuBtn');
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.getElementById('overlay');
-  function openMenu() { sidebar.classList.add('open'); overlay.classList.add('open'); }
-  function closeMenu() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
-  btn.addEventListener('click', openMenu);
-  overlay.addEventListener('click', closeMenu);
-  sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  (function() {
+    var btn = document.getElementById('menuBtn');
+    var sidebar = document.querySelector('.sidebar');
+    var overlay = document.getElementById('overlay');
+    if (!btn || !sidebar || !overlay) return;
+    function openMenu() { sidebar.classList.add('open'); overlay.classList.add('open'); }
+    function closeMenu() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+    btn.addEventListener('click', openMenu);
+    overlay.addEventListener('click', closeMenu);
+    sidebar.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+  })();
 </script>
 </body>
 </html>
