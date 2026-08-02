@@ -1,0 +1,126 @@
+body{
+    background: linear-gradient(to right, #eb853d, #C84201);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Funnel Display", "Sans Serif";
+    color: white;
+}
+
+#heading{
+    text-align: center;
+    font-size: 60px;
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+section{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #111111;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+    border: 1px solid #222;
+}
+
+h2{
+    text-align: center;
+}
+
+a:link{
+    color: orange;
+}
+
+a:visited{
+    color: grey;
+}
+
+a:hover{
+    color: #FFC55C;
+}
+
+a:active{
+    color: #FBCEB1;
+}
+
+div.image{
+    background-color: #111111;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.image img{
+    padding: 10px;
+}
+
+header {
+        background: #00000080;
+        padding: 2rem;
+        text-align: center;
+        border-radius: 8px;
+        }
+
+footer {
+       text-align: center;
+       padding: 2rem;
+       font-size: 0.8rem;
+       color: #000000;
+}
+
+button{
+      display: inline-block;
+      background: #00000000;
+      color: white;
+      font-size: 15px;
+      padding: 20px 25px;
+      text-decoration: none;
+      border-radius: 20px;
+      border-color: orange;
+      transition: background 0.3s;
+      font-family: "Google Sans", "Sans Serif";
+}
+
+button:hover{
+    background: C84201;
+    border-radius: 15px;
+}
+
+.discord{
+    border-color: #5865F2;
+    background-color: #5865F2;
+    margin-left: 5px;
+}
+
+.projects{
+    border-color: #7AAEC4;
+    margin-top: 10px;
+  }
