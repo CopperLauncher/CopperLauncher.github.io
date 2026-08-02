@@ -105,7 +105,9 @@ button{
       text-decoration: none;
       border-radius: 20px;
       border-color: orange;
-      transition: background 0.3s;
+      transition: background 0.5s;
+      margin-top: 10px;
+      margin-left: 5px;
       font-family: "Google Sans", "Sans Serif";
 }
 
@@ -117,10 +119,8 @@ button:hover{
 .discord{
     border-color: #5865F2;
     background-color: #5865F2;
-    margin-left: 5px;
 }
 
 .projects{
     border-color: #7AAEC4;
-    margin-top: 10px;
-  }
+	}
