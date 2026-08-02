@@ -1,2 +1,1 @@
-# CopperLauncher
-Official CopperLauncher Website, Made By ScientistSteve.
+**Nothing Here Yet...**
