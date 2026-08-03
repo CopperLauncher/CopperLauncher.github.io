@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/51cc882127.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+        <img src="assets/img/icon.webp" alt="Copper Logo" height="250">
+        <h1 id="heading" class="slide-in-left">Blogs</h1>
+        <p><b>Check Out Latest Updates, News, Announcements & Sneak-Peaks About Copper!</b></p>
+        <a href="index.html"><button><b>Home</b></button></a>
+        <a href="controls.html"><button><b>Explore Controls</b></button></a>
+    </header>
+      <section class="card">
+        <img src="assets/img/syncwamethyst.png" alt="Thumbnail">
+        <div>
+          <h2 class="slide-in-left">Syncing With Amethyst!</h2>
+          <p class="publish-date"><b><sub>July 20, 2026</sub></b></p>
+          <p class="tag"><b>Announcement</b></p>
+          <h3>New Features:</h3>
+          <ul>
+              <li>New default controls by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
+              <li>Show device memory and memory allocation to Minecraft in the log by <a href="https://github.com/Jokypond">@Jokypond</a>.</li>
+              <li>Versions using SDL (lwjgl3ify and 26.3-snapshot4+) and Touchcontroller will have automatic keyboard popup.</li>
+              <li>Added -release/-debug to logs by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
+              <li>Added forward and backward mouse buttons.</li>
+          </ul>
+          <h3>Fixed Bugs:</h3>
+          <ul>
+              <li>Remove check against Java 17+ for the "Execute a .jar" option in the launcher by <a href="https://github.com/rock3tsprocket">@rock3tsprocket</a>.</li>
+              <li>Delete security manager by <a href="https://github.com/Jokypond">@Jokypond</a>.</li>
+              <li>Fix drop item button incorrectly not bound to q by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
+              <li>26.2+ should now work.</li>
+              <li>Used incorrect natives for LWJGL 3.4.1 (not aware of this breaking anything).</li>
+              <li>Crash upon modpack import of packs using no-installer forge versions.</li>
+              <li>Incorrect lwjglx jar handling borking some versions of forgemodloader.</li>
+              <li>Minimap mods having a yellow tint in MobileGlues.</li>
+              <li>Some forge installer versions not working.</li>
+              <li>Some forge versions not working.</li>
+              <li>Crash if you deleted your default control map.</li>
+              <li>Controlify crashing on newer versions.</li>
+              <li>Sometimes being logged into Demo.Player if auth server has connection issues.</li>
+              <li>Fixed Krypton Wrapper in newer versions.</li>
+          </ul>
+          <h3>Removed:</h3>
+          <ul>
+              <li>SDL switch. It is now automatic!</li>
+          </ul>
+          <h3>Known Issues:</h3>
+          <ul>
+              <li>Forward and back buttons on physical mouse still won't work.</li>
+              <li>If using SDL input, mouse forward and backward side buttons will be reversed.</li>
+          </ul>
+          <a href="https://github.com/CopperLauncher/Copper-Android/releases/download/v1.3.1/copper.apk"><button><b>Download</b></button></a>
+          <a href="https://github.com/CopperLauncher/Copper-Android/archive/refs/tags/v1.3.1.zip"><button><b>Source Code</b></button></a>
+        </div>
+      </section>
+      <footer>
+        <p>&copy; CopperLauncher, All Rights Reserved.</p>
+    </footer>
+  </body>
+  </html>
