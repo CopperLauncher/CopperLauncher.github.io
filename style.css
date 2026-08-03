@@ -9,6 +9,8 @@ body{
 #heading{
     text-align: center;
     font-size: 60px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 .slide-in-left {
@@ -53,6 +55,10 @@ section{
 
 h2{
     text-align: center;
+    font-size: 2rem;
+    margin: 0 0 10px;
+    border-bottom: 2px solid rgba(247, 129, 102, 0.2);
+    padding-bottom: 10px;
 }
 
 a:link{
@@ -60,7 +66,7 @@ a:link{
 }
 
 a:visited{
-    color: grey;
+    color: orange;
 }
 
 a:hover{
@@ -86,15 +92,8 @@ header {
         background: #00000080;
         padding: 2rem;
         text-align: center;
-        border-radius: 8px;
+        border-radius: 10px;
         }
-
-footer {
-       text-align: center;
-       padding: 2rem;
-       font-size: 0.8rem;
-       color: #000000;
-}
 
 button{
       display: inline-block;
@@ -106,21 +105,69 @@ button{
       border-radius: 20px;
       border-color: orange;
       transition: background 0.5s;
-      margin-top: 10px;
+      margin-top: 20px;
       margin-left: 5px;
+      margin-bottom: 5px;
       font-family: "Google Sans", "Sans Serif";
 }
 
 button:hover{
-    background: C84201;
-    border-radius: 15px;
+    background: #C84201;
+    border-radius: 18px;
 }
 
 .discord{
     border-color: #5865F2;
     background-color: #5865F2;
+    margin-top: 10px; 
 }
 
-.projects{
+.blogs{
     border-color: #7AAEC4;
-	}
+}
+
+.card  img{
+  height: 100%;
+  width:100%;
+}
+
+.tag{
+ margin: auto;
+ font-size: auto;
+ font-weight: 600;
+ background: linear-gradient(60deg, #eb853d, orange);
+ color: transparent;
+ background-clip: text;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #161b22;
+    color: #8b949e;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    color: #c9d1d9;
+}
+
+p{
+    padding-bottom: 10px;
+}
+
+h3{
+    padding-bottom: 10px;
+}
