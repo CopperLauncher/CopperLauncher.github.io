@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/51cc882127.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
   </head>
   <body>
       <header>
@@ -20,8 +21,93 @@
                 <a href="index.html"><button><b>Home</b></button></a>
                 <a href="wiki.html"><button class="blogs"><b>Visit Wiki</b></button></a>
       </header>
+      <section>
+          <h2 class="slide-in-left">Recommended & Not Recommended Modpacks</h2>
+          <p>We generally suggest users to use popular and good modpacks such as "Pojavly Optimized", "Adrenaline", "Fabulously optimized", "Speed of light", "Simply Optimized forks", "Additive", or "OptiDroid".</p>
+          <br>
+          <p>We will not provide support to AI generated modpacks, such as:</p>
+          <ul>
+              <li id="negative">Spunky Optimized;</li>
+              <li id="negative">Spunky Boost;</li>
+              <li id="negative">Spunky X Vulkan;</li>
+              <li id="negative">OptiFPS;</li>
+              <li id="negative">RKMC's FPS Boost Modpacks;</li>
+              <li id="negative">OptiMobile.</li>
+          </ul>
+          <p>We don't recommend users to use modpacks from <b>Spunky Insaan, RKMC_GAMERZ & DNA Mobile Gaming</b>, since all of their modpacks are AI generated and/or bloated and filled with misinformation.</p>
+      </section>
+      <section>
+          <h2>Information About Renderers</h2>
+          <h3><a href="https://github.com/FCL-Team/Holy-GL4ES">Holy GL4ES</a></h3>
+          <ul>
+              <li id="positive">Simple Engine, Best Performance;</li>
+              <li id="positive">Little Compatibility with Mods & Shaders;</li>
+              <li id="negative">Cannot Run Minecraft 1.21.6+.</li>
+          </ul>
+          <h3><a href="https://github.com/MojoLauncher/LTW">LTW</a></h3>
+          <ul>
+              <li  id="positive">Almost as fast as GL4ES;</li>
+              <li  id="positive">Good Compatibility with lots of mods & shaders;</li>
+              <li  id="positive">Heals Skin Cancer;</li>
+              <li  id="negative">Supports Minecraft 1.17- Latest.</li>
+          </ul>
+          <h3><a href="https://github.com/Akarin-project/PojavLauncher-zink">Zink</a></h3>
+          <ul>
+              <li  id="positive">Very Good Compatibility with almost all Shaders & Mods;</li>
+              <li  id="negative">Very Slow;</li>
+              <li  id="negative">Supports Minecraft 1.0- 1.21.5.</li>
+          </ul>
+          <h3><a href="https://github.com/BZLZHH/NG-GL4ES">Krypton Wrapper</a></h3>
+          <ul>
+              <li id="positive">Capability to Handle More Advanced Shaders;</li>
+              <li id="positive">Capability to Run Minecraft in Almost all Versions;</li>
+              <li id="positive">More Advanced OpenGL Features;</li>
+              <li id="positive">Run Sodium in Minecraft 1.16.5;</li>
+              <li id="positive">Supports Minecraft 1.0- Latest.</li>
+          </ul>
+          <h3><a href="https://github.com/MobileGL-Dev/MobileGlues-release">MobileGlues</a></h3>
+          <ul>
+              <li id="positive">Almost as fast as GL4ES;</li>
+              <li id="positive">Good Compatibility with lots of Mods like Sodium & Some Shaders;</li>
+              <li id="positive">Heals Skin Cancer;</li>
+              <li id="negative">Supports Minecraft 1.17- Latest.</li>
+          </ul>
+      </section>
+      <section>
+          <h2>Commonly Asked That Doesn't Works</h2>
+          <h3>Discord-RPC:</h3>
+          <p>Does not work due to missing library for d-rpc, will be fixed in the future.</p>
+          <h3>Valkyrien Skies:</h3>
+          <p>Not compatible for android and never will be because it is made for PC.</p>
+          <h3>Replay Mod:</h3>
+          <p>Works only if you have FFMpeg plugin installed. Alternatively you can use <a href="https://modrinth.com/mod/record-able">Record-able</a>.</p>
+          <h3>Flashback:</h3>
+          <p>Does not work due to imgui & aggressive openGL calls. For alternative you can use  <a href="https://modrinth.com/mod/record-able">Record-able</a>.</p>
+          <h3>Minecraft Clients:</h3>
+          <p>Clients like Feather Client (also known as Dawn Client), Fast Client etc. will not work because you can't run a client inside a launcher.</p>
+          <h3>TopkaVisuals:</h3>
+          <p>Uses a VMProtected .dll, doesn't properly work even on x86_64 Windows.</p>
+          <h3>Immersive Portals:</h3>
+          <p>Only works if your native OpenGLES driver has <a class="code">GL_EXT_clip_cull_distance</a> extension supported.</p>
+          <h3>Xareo's Map Mods:</h3>
+          <p>Colours might be incorrect and graphical issues may occur with LTW Renderer.</p>
+          <h3>Blacklisted Mods & Clients:</h3>
+          <ul>
+              <li id="negative">Baritone: Cheats;</li>
+              <li id="negative"> LiquidBounce: Cheats;</li>
+              <li id="negative">Wurst Client: Cheats;</li>
+              <li id="negative"> Meteor Client: Cheats;</li>
+              <li id="negative"> Impact Client: Cheats;</li>
+              <li id="negative"> Doomsday Client: Cheats;</li>
+              <li id="negative">RusherHack: Cheats;</li>
+              <li id="negative">Future: Cheats;</li>
+              <li id="negative">Mio: Cheats ;</li>
+              <li id="negative">Payload: Cheats;</li>
+              <li id="negative"> Jenny Mod: NSFW.</li>
+          </ul>
+      </section>
      <footer>
         <p>&copy; CopperLauncher, All Rights Reserved.</p>
     </footer>
   </body>
-  </html>
+          </html>
