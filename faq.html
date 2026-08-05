@@ -20,10 +20,14 @@
                 <a href="index.html"><button><b>Home</b></button></a>
                 <a href="wiki.html"><button class="blogs"><b>Visit Wiki</b></button></a>
       </header>
-      <section>
+      <section class="card">
+          <h2 class="slide-in-left ">Safety</h2>
+          <p>Yes— Copper is safe to use. Our launcher does not contain any spyware, malware, ransomware, trojans, or neither vibecoded by AI. If you want to check the source code yourself; you can absolutely do that by clicking <a href="https://github.com/CopperLauncher/Copper-Android">here</a>.</p>
+          <p>We do not have our project listed to any other websites or 3rd Party app stores, only download or update copper from our <a href="https://github.com/CopperLauncher/Copper-Android">Github Repository</a>. If you find any other sites promoting our project, please let us know in our <a href="https://dsc.gg/CopperLauncher">Discord Server</a>.</p>
+      </section>
+      <section class="card">
           <h2 class="slide-in-left">Recommended & Not Recommended Modpacks</h2>
           <p>We generally suggest users to use popular and good modpacks such as "Pojavly Optimized", "Adrenaline", "Fabulously optimized", "Speed of light", "Simply Optimized forks", "Additive", or "OptiDroid".</p>
-          <br>
           <p>We will not provide support to AI generated modpacks, such as:</p>
           <ul>
               <li id="negative">Spunky Optimized;</li>
@@ -35,7 +39,7 @@
           </ul>
           <p>We don't recommend users to use modpacks from <b>Spunky Insaan, RKMC_GAMERZ & DNA Mobile Gaming</b>, since all of their modpacks are AI generated and/or bloated and filled with misinformation.</p>
       </section>
-      <section>
+      <section class="card">
           <h2 class="slide-in-left">Information About Renderers</h2>
           <h3><a href="https://github.com/FCL-Team/Holy-GL4ES">Holy GL4ES</a></h3>
           <ul>
@@ -72,7 +76,7 @@
               <li id="negative">Supports Minecraft 1.17- Latest.</li>
           </ul>
       </section>
-      <section>
+      <section class="card">
           <h2 class="slide-in-left">Commonly Asked Mods That Doesn't Works</h2>
           <h3>Discord-RPC:</h3>
           <p>Does not work due to missing library for d-rpc, will be fixed in the future.</p>
@@ -105,8 +109,15 @@
               <li id="negative"> Jenny Mod: NSFW.</li>
           </ul>
       </section>
+      <section class="card">
+          <h2 class="slide-in-left">Alternate Surface Renderer</h2>
+          <p>In order to render stuff for the user to see, you need some sort of window. On Android, a "window" is a producer-consumer pair (where the producer is the OpenGL driver that Minecraft runs on).</p>
+          <p>The "Alternate Surface Renderer" changes who's the consumer.</p>
+          <p><b>Off:</b> The consumer is <a class="code">surfaceflinger</a> (the system compositor) which means stricter timings are enforced. This means that stutters practically disappear if your device is good enough.</p>
+          <p><b>On:</b> The consumer is a <a class="code">TextureView</a>, which renders the buffer using the standard view system. This is a worse approach, because it reduces the amount of synchronization done when redering, which means stutters for powerful devices. However, less synchronization also means higher FPS numbers.</p>
+      </section>
      <footer>
         <p>&copy; CopperLauncher, All Rights Reserved.</p>
     </footer>
   </body>
-</html>
+  </html>
