@@ -222,4 +222,76 @@ h3{
             transform: scale(1);
     opacity: 1;
   }
-	}
+}
+
+.gh-toggle-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1001;
+    background-color: #010409;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #f0f6fc;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.gh-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 65px;
+    left: 16px;
+    width: calc(100% - 32px);
+    max-width: 400px;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8);
+    padding: 16px;
+    box-sizing: border-box;
+    z-index: 1000;
+    font-family: "Funnel Display", "Sans Serif";
+}
+
+.gh-menu-overlay.active {
+    display: block;
+}
+
+.gh-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.gh-menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 8px;
+    text-decoration: none;
+    color: #f0f6fc;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #21262d;
+    transition: background-color 0.2s ease;
+}
+
+.gh-menu-item:hover {
+    background-color: #161b22;
+}
+
+.gh-menu-item:last-child {
+border-bottom: none;
+}
+
+.gh-menu-item i {
+color: #8b949e;
+font-size: 14px;
+}
+
+#discord {
+    color: #5865F2;
+}
