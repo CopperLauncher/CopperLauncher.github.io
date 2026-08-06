@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Frequently Asked Questions</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,37 @@
     <script src="https://kit.fontawesome.com/51cc882127.js" crossorigin="anonymous"></script>
   </head>
   <body>
+        <button class="gh-toggle-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+        <div class="gh-menu-overlay" id="ghMenu">
+            <nav class="gh-menu-list">
+                <a href="index.html" class="gh-menu-item" onclick="toggleMenu()">
+                    <span>Home</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="faq.html" class="gh-menu-item">
+                    <span>FAQ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="wiki.html" class="gh-menu-item">
+                    <span>Wiki</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="blogs.html" class="gh-menu-item">
+                    <span>Blogs</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="https://dsc.gg/CopperLauncher" class="gh-menu-item" id="discord">
+                    <span>Discord</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
       <header>
                   <img src="assets/img/icon.webp" alt="Copper Logo" height="250">
         <h1 id="heading" class="slide-in-left">FAQ</h1>
         <p><b>Usually Asked Questions are Answered Here. Please Read them Carefully.</b></p>
-                <a href="index.html"><button><b>Home</b></button></a>
-                <a href="wiki.html"><button class="blogs"><b>Visit Wiki</b></button></a>
       </header>
       <section class="card">
           <h2 class="slide-in-left ">Safety</h2>
@@ -119,5 +144,21 @@
      <footer>
         <p>&copy; CopperLauncher, All Rights Reserved.</p>
     </footer>
+    <script>
+            function toggleMenu() {
+                const menu = document.getElementById('ghMenu');
+                const icon = document.getElementById('menuIcon');
+                
+                menu.classList.toggle('active');
+                
+                if (menu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+    </script>
   </body>
   </html>
