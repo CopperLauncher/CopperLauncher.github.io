@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blogs</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,37 @@
     <script src="https://kit.fontawesome.com/51cc882127.js" crossorigin="anonymous"></script>
   </head>
   <body>
+        <button class="gh-toggle-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+        <div class="gh-menu-overlay" id="ghMenu">
+            <nav class="gh-menu-list">
+                <a href="index.html" class="gh-menu-item" onclick="toggleMenu()">
+                    <span>Home</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="faq.html" class="gh-menu-item">
+                    <span>FAQ</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="wiki.html" class="gh-menu-item">
+                    <span>Wiki</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="blogs.html" class="gh-menu-item">
+                    <span>Blogs</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="https://dsc.gg/CopperLauncher" class="gh-menu-item" id="discord">
+                    <span>Discord</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
     <header>
         <img src="assets/img/icon.webp" alt="Copper Logo" height="250">
         <h1 id="heading" class="slide-in-left">Blogs</h1>
         <p><b>Check Out Latest Updates, News, Announcements & Sneak-Peaks About Copper!</b></p>
-        <a href="index.html"><button><b>Home</b></button></a>
     </header>
           <section class="card">
         <img src="assets/img/vacationcopper.png" alt="Thumbnail">
@@ -78,7 +104,7 @@
               <li>New default controls by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
               <li>Show device memory and memory allocation to Minecraft in the log by <a href="https://github.com/Jokypond">@Jokypond</a>.</li>
               <li>Versions using SDL (lwjgl3ify and 26.3-snapshot4+) and Touchcontroller will have automatic keyboard popup.</li>
-              <li>Added -release/-debug to logs by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
+              <li>Added <a class="code">-release</a>/<a class="code">-debug</a> to logs by <a href="https://github.com/rkxspace">@rkxspace</a>.</li>
               <li>Added forward and backward mouse buttons.</li>
           </ul>
           <h3>Fixed Bugs:</h3>
@@ -114,5 +140,21 @@
       <footer>
         <p>&copy; CopperLauncher, All Rights Reserved.</p>
     </footer>
+    <script>
+            function toggleMenu() {
+                const menu = document.getElementById('ghMenu');
+                const icon = document.getElementById('menuIcon');
+                
+                menu.classList.toggle('active');
+                
+                if (menu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+    </script>
   </body>
 </html>
