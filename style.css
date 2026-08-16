@@ -1,5 +1,5 @@
 body{
-    background: #fbab8b;
+    background: #c05836;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: "Funnel Display", "Sans Serif";
@@ -272,7 +272,7 @@ h3{
     align-items: center;
     padding: 14px 8px;
     text-decoration: none;
-    color: #5f1604;
+    color: #000000CC;
     font-size: 16px;
     font-weight: 500;
     border-bottom: 1px solid #21262d;
