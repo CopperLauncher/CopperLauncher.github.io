@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>12x12 Image to Android Vector Drawable XML</title>
+</head>
+<body>
+
+<h1>12x12 Image to Android Vector Drawable XML</h1>
+<p>Upload a 12x12 image. Each pixel is converted into a path in a VectorDrawable XML file, so no separate PNG is needed - just drop the .xml straight into <code>res/drawable/</code>.</p>
+
+<input type="file" id="fileInput" accept="image/*">
+<br><br>
+
+<label for="nameInput">File name (no extension):</label>
+<br>
+<input type="text" id="nameInput" value="ic_icon">
+<br><br>
+
+<input type="checkbox" id="forceWhite" checked>
+<label for="forceWhite">Force white (ignore source colors, use alpha as a mask)</label>
+<br><br>
+
+<button id="convertBtn">Convert</button>
+
+<br><br>
+<canvas id="canvas" width="12" height="12"></canvas>
+
+<br><br>
+<div id="status"></div>
+<br>
+<textarea id="output" rows="20" cols="80" readonly></textarea>
+
+<script>
+var fileInput = document.getElementById('fileInput');
+var nameInput = document.getElementById('nameInput');
+var convertBtn = document.getElementById('convertBtn');
+var canvas = document.getElementById('canvas');
+var status = document.getElementById('status');
+var output = document.getElementById('output');
+
+function toHex2(n) {
+  var h = n.toString(16);
+  return h.length === 1 ? '0' + h : h;
+}
+
+convertBtn.addEventListener('click', function() {
+  var file = fileInput.files[0];
+  if (!file) {
+    status.textContent = 'Please choose an image file first.';
+    return;
+  }
+
+  var baseName = (nameInput.value || 'ic_icon').trim();
+  if (baseName === '') baseName = 'ic_icon';
+
+  var img = new Image();
+  img.onload = function() {
+    if (img.width !== 12 || img.height !== 12) {
+      status.textContent = 'Warning: image is ' + img.width + 'x' + img.height + ', not 12x12. Reading at 12x12 anyway.';
+    } else {
+      status.textContent = '';
+    }
+
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, 12, 12);
+    ctx.drawImage(img, 0, 0, 12, 12);
+
+    var data = ctx.getImageData(0, 0, 12, 12).data;
+
+    var forceWhite = document.getElementById('forceWhite').checked;
+
+    // Group pixels by color (forced white or exact original color, including alpha)
+    var groups = {};
+    var order = [];
+
+    for (var y = 0; y < 12; y++) {
+      for (var x = 0; x < 12; x++) {
+        var idx = (y * 12 + x) * 4;
+        var r = data[idx];
+        var g = data[idx + 1];
+        var b = data[idx + 2];
+        var a = data[idx + 3];
+
+        if (a === 0) continue; // skip fully transparent pixels
+
+        var alphaHex = toHex2(a);
+        var colorHex = forceWhite
+          ? '#' + alphaHex + 'FFFFFF'
+          : '#' + alphaHex + toHex2(r) + toHex2(g) + toHex2(b);
+
+        if (!groups[colorHex]) {
+          groups[colorHex] = [];
+          order.push(colorHex);
+        }
+        groups[colorHex].push('M' + x + ',' + y + 'h1v1h-1z');
+      }
+    }
+
+    var pathsXml = '';
+    for (var i = 0; i < order.length; i++) {
+      var color = order[i];
+      var pathData = groups[color].join('');
+      pathsXml += '    <path\n' +
+                  '        android:fillColor="' + color + '"\n' +
+                  '        android:pathData="' + pathData + '" />\n';
+    }
+
+    var xml = '<vector xmlns:android="http://schemas.android.com/apk/res/android"\n' +
+               '    android:width="12dp"\n' +
+               '    android:height="12dp"\n' +
+               '    android:viewportWidth="12"\n' +
+               '    android:viewportHeight="12">\n' +
+               pathsXml +
+               '</vector>\n';
+
+    output.value = xml;
+
+    var blob = new Blob([xml], { type: 'text/xml' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = baseName + '.xml';
+    a.textContent = 'Download ' + baseName + '.xml';
+    status.innerHTML = '';
+    status.appendChild(a);
+    var p = document.createElement('p');
+    p.textContent = 'Place this file directly in app_pojavlauncher/src/main/res/drawable/';
+    status.appendChild(p);
+  };
+  img.src = URL.createObjectURL(file);
+});
+</script>
+
+</body>
+</html>
